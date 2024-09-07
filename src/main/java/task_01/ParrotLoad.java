@@ -11,6 +11,7 @@ public class ParrotLoad {
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(file))) {
 
             Parrot parrot = (Parrot) in.readObject();
+            System.out.println(parrot);
 
         }catch (Exception e){
             e.printStackTrace();
