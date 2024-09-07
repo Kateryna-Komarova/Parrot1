@@ -13,7 +13,7 @@ public class ParrotLoad {
             Parrot parrot = (Parrot) in.readObject();
             System.out.println(parrot);
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

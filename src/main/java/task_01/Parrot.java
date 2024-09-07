@@ -64,6 +64,6 @@ public class Parrot implements Serializable {
     @Override
     public String toString() {
         return String.format("Parrot: name - %s, color - %s, age - %d, numberOfWords - %d",
-                name,color,age,numberOfWords);
+                name, color, age, numberOfWords);
     }
 }
