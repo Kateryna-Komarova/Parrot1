@@ -13,6 +13,8 @@ public class ParrotSave {
         System.out.println(parrot);
 
         try(ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(file))) {
+            file.createNewFile();
+            out.writeObject(parrot);
 
         }catch (Exception e){
             System.out.println("Error: " + e.getMessage());
