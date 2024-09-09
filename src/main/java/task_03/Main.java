@@ -21,13 +21,6 @@ public class Main {
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
             marshaller.marshal(parrot, file);
 
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-        try {
-
-            File file1 = new File("parrot_xml.xml");
-            JAXBContext context = JAXBContext.newInstance(Parrot.class);
             Unmarshaller unmarshaller = context.createUnmarshaller();
             Object parrot1 = (Parrot) unmarshaller.unmarshal(file);
             System.out.println("Parrot from xml: ");
@@ -36,7 +29,5 @@ public class Main {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
-
     }
 }
